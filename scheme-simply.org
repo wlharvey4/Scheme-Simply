@@ -1,0 +1,92 @@
+#+TITLE: Scheme Simply
+* Introduction--Functions
+** The Big Ideas
+The purpose of these introductory pages before each part of the book
+is to call attention to a big idea that runs through all the work of
+several chapters. In the chapters themselves, the big idea may
+sometimes be hidden from view because of the technical details that we
+need to make the idea work.
+** First Two Chapters--Functions
+In these first two chapters, our goal is to introduce the Scheme
+programming language and the idea of using /functions/ as the building
+blocks of a computation.
+*** First Chapter--What Scheme Can Do
+The first chapter is a collection of short Scheme programs, presented
+to show off what Scheme can do. We'll try to explain enough of the
+mechanism so that you don't feel completely mystified, but we'll defer
+the details until later. Our goal is not for you to feel that you
+could re-create these programs, but rather that you get a sense of
+what kinds of programs we'll be working with.
+*** Second Chapter--Functions in Detail
+The second chapter explores functions in some detail. Traditionally,
+computer programs are built out of actions: First do this, then do
+that, and finally print the results. Each step in the program does
+something. Functional programming is different, in that we are less
+concerned with actions and more concerned with values.
+* Chapter 1 Showing Off Scheme
+** Control of Complexity
+We are going to use the programming language Scheme to teach you some
+big ideas in computer science.  The ideas are mostly about /control of
+complexity/---that is, about how to develop a large computer program
+without being swamped in details.
+*** Abstraction
+For example, once you've solved part of the large problem, you can
+give that partial solution a name and then you can use the named
+subprogram as if it were an indivisible operation, just like the ones
+that are built into the computer. Thereafter, you can forget about the
+details of that subprogram. This is the beginning of the idea of
+/abstraction/, which we'll discuss in more depth throughout the book.
+*** Scheme--A Dialect of Lisp
+The big ideas are what this book is about, but first we're going to
+introduce you to Scheme. (Scheme is a dialect of Lisp, a family of
+computer programming languages invented for computing with words,
+sentences, and ideas instead of just numbers.)
+** Talking to Scheme
+*** Starting Scheme
+The incantations to get Scheme running will be different for each
+model of computer. Appendix A talks about these details; you can look
+up the particular version of Scheme that you're using.
+*** Loading ~Simply.scm~
+That appendix will also tell you how to load the file ~simply.scm~,
+which you need to make the examples in this book work.
+*** Scheme Prompt
+When Scheme has started up and is ready for you to interact with it,
+you'll see a message on the screen, something like this:
+#+BEGIN_EXAMPLE
+Welcome to XYZ Brand Scheme.
+>
+#+END_EXAMPLE
+The =>= is a prompt, Scheme's way of telling you that it's ready for
+you to type something. Scheme is an interactive programming
+language. In other words, you type a request to Scheme, then Scheme
+prints the answer, and then you get another prompt.
+#+begin_example
+> (+ 4 7)
+11
+> (- 23 5)
+18
+> (+ 5 6 7 8)
+26
+#+end_example
+*** Procedures
+Whenever something you type to Scheme is enclosed in parentheses, it
+indicates a request to carry out a /procedure/.  The first thing
+inside the parentheses indicates what procedure to use; the others are
+/arguments/, i.e., values that are used as data by the procedure.
+** Recovering from Typing Errors--The Debugger
+The exact form of the message you get will depend on the version of
+Scheme that you're using. For now, the important point is that some
+versions deal with errors by leaving you talking to a debugger instead
+of to Scheme itself. The debugger may have a completely different
+language. It's meant to help you figure out what's wrong in a large
+program you've written. For a beginner, though, it's more likely to
+get in the way. Read the documentation for your particular Scheme
+dialect to learn how to escape from the debugger. (In some versions
+you don't get trapped in a debugger when you make an error, so this
+problem may not arise.)
+** Exiting Scheme
+Although there's no official standard way to exit Scheme, most
+versions use the notation
+: > (exit)
+: > (quit)
+
